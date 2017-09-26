@@ -3,21 +3,21 @@ void setup() {
 }
 
 void loop() {
-  
+
   String input = readSerial();
 
-  if(input == "hello arduino"){
-    Serial.println("hello user");  
-    }
-  
+  if (input == "hello arduino") {
+    Serial.println("hello user");
+  }
+
   delay(1000);
-} 
+}
 
 
-String readSerial(){
-    String serial_in="";
-  
-  if(Serial.available()>0){
+String readSerial() {
+  String serial_in = "";
+
+  if (Serial.available() > 0) {
     serial_in = Serial.readStringUntil('\\');
   }
   return serial_in;
